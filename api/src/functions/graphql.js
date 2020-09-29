@@ -19,7 +19,7 @@ export const handler = createGraphQLHandler({
   },
   context: ({ context, event }) => {
     return {
-      ip: event.requestContext.identity.sourceIp,
+      ip: event?.requestContext?.identity?.sourceIp,
       ...context,
     }
   },
